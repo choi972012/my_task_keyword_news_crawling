@@ -43,8 +43,8 @@
    <widget class="QGroupBox" name="collect_gr">
     <property name="geometry">
      <rect>
-      <x>670</x>
-      <y>150</y>
+      <x>70</x>
+      <y>40</y>
       <width>631</width>
       <height>491</height>
      </rect>
@@ -72,7 +72,7 @@ border: 1px solid black;
        <x>10</x>
        <y>40</y>
        <width>221</width>
-       <height>441</height>
+       <height>411</height>
       </rect>
      </property>
      <attribute name="verticalHeaderVisible">
@@ -102,7 +102,7 @@ border: 1px solid black;
       <string>시작날짜</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QLineEdit" name="start_date">
      <property name="geometry">
       <rect>
        <x>110</x>
@@ -122,10 +122,10 @@ border: 1px solid black;
       </rect>
      </property>
      <property name="text">
-      <string>날짜설정</string>
+      <string>설정완료</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
+    <widget class="QLineEdit" name="end_date">
      <property name="geometry">
       <rect>
        <x>360</x>
@@ -157,51 +157,12 @@ border: 1px solid black;
        <x>240</x>
        <y>40</y>
        <width>381</width>
-       <height>441</height>
+       <height>411</height>
       </rect>
      </property>
      <property name="title">
       <string/>
      </property>
-     <widget class="QRadioButton" name="enemy">
-      <property name="geometry">
-       <rect>
-        <x>110</x>
-        <y>10</y>
-        <width>61</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>경쟁사</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="company">
-      <property name="geometry">
-       <rect>
-        <x>60</x>
-        <y>10</y>
-        <width>51</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>자사</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="field">
-      <property name="geometry">
-       <rect>
-        <x>170</x>
-        <y>10</y>
-        <width>61</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>업계</string>
-      </property>
-     </widget>
      <widget class="QPushButton" name="to_word">
       <property name="geometry">
        <rect>
@@ -215,26 +176,13 @@ border: 1px solid black;
        <string>워드로 출력</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="all">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>10</y>
-        <width>51</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>전체</string>
-      </property>
-     </widget>
-     <widget class="QTableWidget" name="tableWidget">
+     <widget class="QTableWidget" name="news_table">
       <property name="geometry">
        <rect>
         <x>10</x>
         <y>40</y>
         <width>361</width>
-        <height>391</height>
+        <height>361</height>
        </rect>
       </property>
       <column>
@@ -248,9 +196,101 @@ border: 1px solid black;
        </property>
       </column>
      </widget>
+     <widget class="QComboBox" name="filter">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>10</y>
+        <width>161</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>전체</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>경쟁사</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>자사</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>업계</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>71</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>필터</string>
+      </property>
+     </widget>
     </widget>
+    <widget class="QLabel" name="log2">
+     <property name="geometry">
+      <rect>
+       <x>110</x>
+       <y>460</y>
+       <width>511</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>460</y>
+       <width>101</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>프로그램 메세지</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="reset_date">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>10</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>재설정</string>
+     </property>
+    </widget>
+    <zorder>reset_date</zorder>
+    <zorder>keyword_table2</zorder>
+    <zorder>label_2</zorder>
+    <zorder>start_date</zorder>
+    <zorder>set_date</zorder>
+    <zorder>end_date</zorder>
+    <zorder>label_3</zorder>
+    <zorder>groupBox</zorder>
+    <zorder>log2</zorder>
+    <zorder>label_5</zorder>
    </widget>
-   <widget class="QPushButton" name="hide_pg_2">
+   <widget class="QPushButton" name="config_btn">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -266,8 +306,8 @@ border: 1px solid black;
    <widget class="QGroupBox" name="config_gr">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>130</y>
+      <x>110</x>
+      <y>590</y>
       <width>631</width>
       <height>491</height>
      </rect>
@@ -333,6 +373,9 @@ border: 1px solid black;
        <width>381</width>
        <height>41</height>
       </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font-size: 20px;</string>
      </property>
      <property name="text">
       <string/>
@@ -498,6 +541,19 @@ border: 1px solid black;
       <string/>
      </property>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="set_date_2">
+    <property name="geometry">
+     <rect>
+      <x>900</x>
+      <y>140</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>설정완료</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
